@@ -1,2 +1,5 @@
-A book about Haskell.
+I'm an odd case. That is, I still consider my self noob #1 when it comes to computer science as a whole. Why's that? I think much of it derives from the fact that computer science is still such a new field to me. See, I didn't write my first line of code until 2 years ago; almost two years ago to the day that I'm writing this. As a result, I'm still trying to catch up to those that I perceive as being well ahead of me. Typically, that's people of my own age that seem to have been writing code since they could do more than just mash buttons on a keyboard.
 
+It is this, then, that lead me to Haskell. Sure, I could spend all of this time learning iOS development, or flirting with the hottest new JavaScript framework (which I have), but I want to learn something that maybe, just maybe will separate me from some of my peers. In a world where kids are writing their first subroutine at the age of 3, something has to be a separator between people. Maybe that is Haskell -- maybe it's not. Either way, the world of functional programming is an exciting, if not mind bending, world. Most of you who will read this know significantly more than I do. But just know, if I can learn this, then you *definitely* can.
+
+Let's begin!
