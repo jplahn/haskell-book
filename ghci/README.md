@@ -37,3 +37,26 @@ Eventually, this prompt could get really long if we load several modules, so we'
 Prelude> :set prompt "ghci> "
 ghci>
 ```
+
+Another thing we can do with ghci is load any files we created so that we can try out any functions that we wrote. Let's create a new file called `add.hs`:
+
+```haskell
+add :: (Num a) => a -> a -> a
+add x y = x + y
+```
+We'll go over the syntax in more detail later, but our first line is defining a funtion called `add` that takes two Nums and returns a Num. The next line creates the function, telling us that it should be called with two parameters. Remember, Haskell is a pure functional language, so every function will return exactly one value. But don't worry if that doesn't make sense, all will be clear soon enough!
+
+To use this shiny new function (ok I know it sucks), we need to load it into our environment. If you're not in ghci already, navigate to the location of `add.hs` and fire up ghci. From there, type:
+
+```haskell
+ghci> :l add
+[1 of 1] Compiling Main             ( add.hs, interpreted )
+Ok, modules loaded: Main.
+ghci> add 2 2
+4
+ghci> add 9 1
+10
+```
+Beautiful. `:l` allows us to load scripts into our interactive environment; we can load as many as we want.
+
+As I said earlier, we're going to hang out in ghci quite a bit as we get ramped up. So learn it, love it, and let's start creating some functions.
