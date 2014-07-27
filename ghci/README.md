@@ -44,6 +44,7 @@ Another thing we can do with ghci is load any files we created so that we can tr
 add :: (Num a) => a -> a -> a
 add x y = x + y
 ```
+
 We'll go over the syntax in more detail later, but our first line is defining a funtion called `add` that takes two Nums and returns a Num. The next line creates the function, telling us that it should be called with two parameters. Remember, Haskell is a pure functional language, so every function will return exactly one value. But don't worry if that doesn't make sense, all will be clear soon enough!
 
 To use this shiny new function (ok I know it sucks), we need to load it into our environment. If you're not in ghci already, navigate to the location of `add.hs` and fire up ghci. From there, type:
