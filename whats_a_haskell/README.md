@@ -1,16 +1,14 @@
 # What's a Haskell?!
 
-For those of you who may have landed on this oddly named book and are wondering what distrubing world you have entered, let's see what almighty Wikipedia can tell us about *what* Haskell is.
+For those of you who may have landed on this oddly named book and are wondering what distrubing world you have entered, let's see what Wikipedia can tell us about *what* Haskell is.
 
     "Haskell is a standardized, general-purpose purely functional programming language, with non-strict semantics and strong static typing."
 
-Got it? Good. Chapter done.
+Hiding in this cryptic definition is the essence of Haskell; let's boil it down.
 
-Just kidding. Hiding in this cryptic definition is the essence of Haskell; let's boil it down.
+First, Haskell can, in fact, be used to build software -- which is good for our purposes. It wouldn't be much use for you and I to spend our precious time on a purely academic exercise.
 
-First, Haskell can, in fact, be used to build software -- which is good for our purposes. It wouldn't be much use for you and I to spend our precious time on an academic exercise.
-
-I don't know about you, but I had no idea what "non-strict semantics" meant before learning Haskell. The essence of this fact is that any arguments we pass into a function will not be evaluated unless our function actually needs them. Example:
+Another potentially confusing phrase is "non-strict semantics." The essence of this statement is that any arguments we pass into a function will not be evaluated unless our function actually needs them. Example:
 
 ```haskell
     ghci> let list = [1..]
