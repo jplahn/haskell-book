@@ -1,6 +1,6 @@
 # Setting up
 
-Fortunately for us, getting set up to run Haskell code is easy. All we really need is a place to write our code and then someway to compile it.
+Fortunately for us, getting set up to run Haskell code is easy. All we really need is a place to write our code and then some way to compile it.
 
 The first one is easy: just use whatever you already use as your text editor. I use Sublime Text and I really like it, but there's plenty of other text editors out there so search around and find what you you like if you don't have a preference already.
 
