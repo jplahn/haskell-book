@@ -5,4 +5,5 @@
 * [GHCi](ghci/README.md)
 * [Functions](functions/README.md)
    * [Types](functions/types.md)
+   * [Function Types](functions/function_types.md)
 
