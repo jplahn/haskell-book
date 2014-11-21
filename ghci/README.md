@@ -4,7 +4,7 @@ Much of what we will do in the beginning can be accomplished with GHCi. It's a g
 
 So to reiterate, in your terminal type `ghci` and you should see the following output:
 
-```haskell
+```
 $: ghci
 GHCi, version 7.6.3: http://www.haskell.org/ghc/      :? for help
 Loading package ghc-prim ... linking ... done.
