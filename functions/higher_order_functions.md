@@ -44,7 +44,7 @@ Great! But still, we're left longing for a little bit *more*. Multiplication isn
 ```haskell
 performOp :: (Num a) => a -> (a -> a) -> [a] -> [a]
 performOp n opp [] = []
-performOp n opp (x:xs) = op[ n x : performOp n opp xs
+performOp n opp (x:xs) = opp n x : performOp n opp xs
 ```
 
 
