@@ -31,7 +31,7 @@ Pretty straightforward and *extremely* powerful. Let's look at its defintion.
 
 ```haskell
 map :: (a -> b) -> [a] -> [b]
-map f [] = []
+map f []     = []
 map f (x:xs) = f x : map f xs
 ```
 
