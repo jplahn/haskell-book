@@ -42,14 +42,27 @@ ghci> multiplyN 3 [1,2,3,4,5]
 Great! But still, we're left longing for a little bit *more*. Multiplication isn't very different than addition, which isn't that different from division, so what if we could wrap all of these up into one function? I think we can.
 
 ```haskell
-performOp :: (Num a) => a -> (a -> a) -> [a] -> [a]
-performOp n opp [] = []
-performOp n opp (x:xs) = opp n x : performOp n opp xs
+performOp :: (Num a) => a -> (a -> a -> a) -> [a] -> [a]
+performOp n op [] = []
+performOp n op (x:xs) = op n x : performOp n op xs
+```
+Making sure it works:
+
+```haskell
+ghci> performOp 2 (+) [1,2,3,4,5]
+[3,4,5,6,7]
+ghci> performOp 2 (/) [1,2,3,4,5]
+[2.0,1.0,0.6666,0.5,0.4]
 ```
 
+Much better than before! But we can still do one better. What's the difference between performing some arithmetic operation on our list versus something that returns a boolean? Right now, it's the *n* that we're passing in, which is unnecessary for other operations. And, its our type declaration that needs changing. But all of this is an easy change.
 
-
-
+```
+performFunc :: (a -> b) -> [a] -> [b]
+performFunc f []        = []
+performFunc f (x:xs)    = f x : performFunc f xs
+```
+We just removed the *n* and modified the function type that we needed to indicate that it can change a to b. *Waiittt*. You may think this looks similar to `map` and you would be right! 
 
 
 
