@@ -9,6 +9,6 @@
    * [Function Types](functions/function_types.md)
    * [Higher Order Functions](functions/higher_order_functions.md)
    * [Infix Operators](functions/infix_operators)
-   * [Building Functions](functions/building_functions.md)
    * Currying
+   * [Building Functions](functions/building_functions.md)
 
