@@ -64,6 +64,15 @@ performFunc f (x:xs)    = f x : performFunc f xs
 ```
 We just removed the *n* and modified the function type that we needed to indicate that it can change a to b. *Waiittt*. You may think this looks similar to `map` and you would be right! This is the exact same definition. Now, instead of writing several functions for every use case, we have on function that can be used over many use cases, all because of higher order functions. Pretty cool, huh? 
 
+The other definition of higher order functions is that they can return functions as their result. This is allows us to do something like:
+
+```haskell
+ghci> let double = map (2*)
+ghci> double [1,2,3,4,5]
+[2,4,6,8,10]
+```
+
+
 
 
 
