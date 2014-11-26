@@ -34,9 +34,12 @@ multiplyN n (x:xs)  = n*x : multiplyN n xs
 ```
 Looks almost the same as before, we've just passed in a value of *n* to multiply each value. Let's make sure it works.
 
+```haskell
+ghci> multiplyN 3 [1,2,3,4,5]
+[3,6,9,12,15]
+```
 
-
-
+Great!
 
 
 
