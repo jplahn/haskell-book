@@ -62,7 +62,7 @@ performFunc :: (a -> b) -> [a] -> [b]
 performFunc f []        = []
 performFunc f (x:xs)    = f x : performFunc f xs
 ```
-We just removed the *n* and modified the function type that we needed to indicate that it can change a to b. *Waiittt*. You may think this looks similar to `map` and you would be right! 
+We just removed the *n* and modified the function type that we needed to indicate that it can change a to b. *Waiittt*. You may think this looks similar to `map` and you would be right! This is the exact same definition. Now, instead of writing several functions for every use case, we have on function that can be used over many use cases, all because of higher order functions. 
 
 
 
