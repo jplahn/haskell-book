@@ -23,16 +23,17 @@ Now say we want to get the *curried* form of `snd`. We can do the following:
 ```haskell
 ghci> snd(1,2)
 2
-ghci> snd 1 2
-<interactive>:10:5: ....        -- error
-ghci> let f = curry snd
-ghci> f 1 2
+ghci> let func = curry snd
+ghci> func 1 2
 2
-ghci> f(1,2)
-<interactive>:14:1:     -- error
 ```
 
+If you try to run `snd 1 2`, ghci will throw an error because `snd` is uncurried and you attempted to use it as a curried function. On the other hand, if you attempt to write `f(1,2)`, an error will be thrown as well for the opposite reason. The `curry` function will return the curried form of a function, which changes the definition of `snd` to this, where func is our new function:
 
+```haskell
+func :: a -> b -> b
+func _ y = y
+```
 
 
 
