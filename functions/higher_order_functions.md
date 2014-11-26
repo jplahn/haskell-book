@@ -74,20 +74,3 @@ ghci> double [1,2,3,4,5]
 
 Wow! We created a *variable* that held the function definition that `map` returned. So we can now apply double over lists and it will perform the same way as if we called ```map (2*) [1,2,3,4,5]``` all in one statement. This magic is provided to us by currying, the topic of our next section. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
