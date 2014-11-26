@@ -47,7 +47,7 @@ ghci> let funcOne = func 1
 ghci> funcOne 4
 4
 ```
-
+`funcOne` is the result of partially applying `func`, since we only gave it a single argument. 
 
 
 
