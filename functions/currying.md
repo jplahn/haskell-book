@@ -21,7 +21,15 @@ Which is actually just the `snd` function provided in Prelude, which returns the
 Now say we want to get the *curried* form of `snd`. We can do the following:
 
 ```haskell
-
+ghci> snd(1,2)
+2
+ghci> snd 1 2
+<interactive>:10:5: ....        -- error
+ghci> let f = curry snd
+ghci> f 1 2
+2
+ghci> f(1,2)
+<interactive>:14:1:     -- error
 ```
 
 
