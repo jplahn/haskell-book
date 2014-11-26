@@ -17,22 +17,24 @@ The real power in being able to use higher order functions is the ability they g
 Say we want functions that will multiply the values in a list by some number. So we could have the following definitions.
 
 ```haskell
-doubleList :: [a] -> [a]
+doubleList :: (Num a) => [a] -> [a]
 doubleList []       = []
 doubleList (x:xs)   = 2*x : doubleList xs
 
-tripleList :: [a] -> [a]
+tripleList :: (Num a) => [a] -> [a]
 tripleList []       = []
 tripleList (x:xs)   = 3*x : tripleList xs
 ```
 We could do this all the way up to some arbitrary number. Clearly this is a terrible way of approaching the problem and it should be clear that the functions look identical, other than the value multiplying x. Let's change the function definition slightly to pass in a more general value of *n* that will multiply each value in the list.
 
 ```haskell
-multiplyN :: a -> [b] -> [b]
+multiplyN :: (Num a) => a -> [a] -> [a]
 multiplyN n []      = []
 multiplyN n (x:xs)  = n*x : multiplyN n xs
 ```
 Looks almost the same as before, we've just passed in a value of *n* to multiply each value. Let's make sure it works.
+
+
 
 
 
