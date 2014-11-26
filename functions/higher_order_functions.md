@@ -30,7 +30,7 @@ We could do this all the way up to some arbitrary number. Clearly this is a terr
 ```haskell
 multiplyN :: a -> [b] -> [b]
 multiplyN n []      = []
-multiplyN n (x:xs)  = n*x : doubleList xs
+multiplyN n (x:xs)  = n*x : multiplyN n xs
 ```
 
 
