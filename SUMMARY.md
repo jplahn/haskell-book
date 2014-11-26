@@ -11,4 +11,5 @@
    * [Currying](functions/currying.md)
    * [Infix Operators](functions/infix_operators.md)
    * [Building Functions](functions/building_functions.md)
+   * Lambda Abstractions
 
