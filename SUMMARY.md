@@ -9,7 +9,7 @@
    * [Function Types](functions/function_types.md)
    * [Higher Order Functions](functions/higher_order_functions.md)
    * [Currying](functions/currying.md)
-   * Lambda Abstractions
    * [Infix Operators](functions/infix_operators.md)
+   * Lambda Abstractions
    * [Building Functions](functions/building_functions.md)
 
