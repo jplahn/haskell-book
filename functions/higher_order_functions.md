@@ -8,3 +8,4 @@ map f [] = []
 map f (x:xs) = f x : map f xs
 ```
 
+As shown in the type declaration, the first argument to map is a function, denoted by (a -> b). For those used to imperative languages, it likely seems strange to pass a function into another function. 
