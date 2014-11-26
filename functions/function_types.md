@@ -50,6 +50,6 @@ In case it wasn't obvious, when we call
 ```
 map f (x:xs) = f x : map f xs
 ```
-we are separating the list into x, which is the front element of the list, and xs, which is the remainder of the list. We call the function on x and then recursively call the map function on xs, passing it f performing the exact same computation as described. We'll discuss building functions in more depth later, so if that wasn't clear, fear not.  
+we are separating the list into x, which is the front element of the list, and xs, which is the remainder of the list. We call the function f on x and then recursively call the map function on xs, passing it f which performs the exact same computation as just described. We'll discuss building functions in more depth later, so if that wasn't clear, fear not.  
 
 So to summarize, `map` takes a function and a list as arguments and returns a list with the function applied over all of the entries. `map` introduces some other interesting aspects of creating functions, so we'll dive into all of those in the following sections. 
