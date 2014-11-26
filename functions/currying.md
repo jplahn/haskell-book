@@ -35,6 +35,28 @@ func :: a -> b -> b
 func _ y = y
 ```
 
+So what's the point? The curried function may look like it's accomplishing the same thing (which it is), but it allows us to leverage partial application with our functions. What is that? Glad you asked!
+
+
+### Partial Application
+
+We already saw partial application at work in the previous section, so hopefully this will make it even clearer (if it wasn't already). Simply put, partial application is the practice of passing a function less than the total number of arguments that it requires. For example, using `func` defined above, we can do the following:
+
+```haskell
+ghci> let funcOne = func 1
+ghci> funcOne 4
+4
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
