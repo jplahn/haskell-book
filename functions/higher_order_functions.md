@@ -32,6 +32,13 @@ multiplyN :: a -> [b] -> [b]
 multiplyN n []      = []
 multiplyN n (x:xs)  = n*x : multiplyN n xs
 ```
+Looks almost the same as before, we've just passed in a value of *n* to multiply each value. Let's make sure it works.
+
+
+
+
+
+
 
 
 
