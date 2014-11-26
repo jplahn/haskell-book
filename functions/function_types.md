@@ -46,4 +46,10 @@ This actually defines both the `even` and `odd` functions, taking the remainder 
 
 Back to `map`, the second argument is a list of type a, denoted by [a]. Finally, we return a list of type b, which makes sense considering the function we pass in can return a value of type b given a value of type a as input. As shown in the example above, when we map the `odd` function over numbers, we are returned booleans as the result.
 
+In case it wasn't obvious, when we call 
+```
+map f (x:xs) = f x : map f xs
+```
+we are separating the list into x, which is the front element of the list, and xs, which is the remainder of the list. We call the function on x and then recursively call the map function on xs, passing it f performing the exact same computation as described. We'll discuss building functions in more depth later, so if that wasn't clear, fear not.  
+
 So to summarize, `map` takes a function and a list as arguments and returns a list with the function applied over all of the entries. `map` introduces some other interesting aspects of creating functions, so we'll dive into all of those in the following sections. 
