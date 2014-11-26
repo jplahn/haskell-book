@@ -4,7 +4,7 @@ In the previous section, we were discussing the `map` function, given by the def
 
 ```haskell
 map :: (a -> b) -> [a] -> [b]
-map f [] = []
+map f []     = []
 map f (x:xs) = f x : map f xs
 ```
 
