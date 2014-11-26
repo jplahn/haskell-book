@@ -28,7 +28,9 @@ tripleList (x:xs)   = 3*x : tripleList xs
 We could do this all the way up to some arbitrary number. Clearly this is a terrible way of approaching the problem and it should be clear that the functions look identical, other than the value multiplying x. Let's change the function definition slightly to pass in a more general value of *n* that will multiply each value in the list.
 
 ```haskell
-
+multiplyN :: a -> [b] -> [b]
+multiplyN n []      = []
+multiplyN n (x:xs)  = n*x : doubleList xs
 ```
 
 
