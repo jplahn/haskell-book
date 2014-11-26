@@ -47,7 +47,7 @@ ghci> let funcOne = func 1
 ghci> funcOne 4
 4
 ```
-`funcOne` is the result of partially applying `func`, since we only gave it a single argument. 
+`funcOne` is the result of partially applying `func`, since we only gave it a single argument. Our new function, `funcOne`, takes the second argument of our pair, which completes the function definition of `func`, allowing us to return the result. If our function takes n arguments, we could partially apply our function n - 1 times until we finally return the result. 
 
 
 
