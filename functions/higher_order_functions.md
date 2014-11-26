@@ -17,8 +17,14 @@ The real power in being able to use higher order functions is the ability they g
 Say we want functions that will multiply the values in a list by some number. So we could have the following definitions.
 
 ```haskell
+doubleList :: [a] -> [a]
+doubleList [] = []
+doubleList (x:xs) = 2*x : doubleList xs
 
-```haskell
+tripleList :: [a] -> [a]
+tripleList [] = []
+tripleList (x:xs) = 3*x : tripleList xs
+```
 
 
 
