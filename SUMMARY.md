@@ -10,6 +10,6 @@
    * [Higher Order Functions](functions/higher_order_functions.md)
    * [Currying](functions/currying.md)
    * [Infix Operators](functions/infix_operators.md)
-   * Lambda Abstractions
+   * [Lambda Abstractions](functions/lambda_abstractions.md)
    * [Building Functions](functions/building_functions.md)
 
