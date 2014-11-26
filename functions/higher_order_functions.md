@@ -41,7 +41,11 @@ ghci> multiplyN 3 [1,2,3,4,5]
 
 Great! But still, we're left longing for a little bit *more*. Multiplication isn't very different than addition, which isn't that different from division, so what if we could wrap all of these up into one function? I think we can.
 
-
+```haskell
+performOp :: (Num a) => a -> (a -> a) -> [a] -> [a]
+performOp n op [] = []
+performOp n op (x:xs) = op n x : performOp n op xs
+```
 
 
 
