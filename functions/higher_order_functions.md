@@ -18,13 +18,14 @@ Say we want functions that will multiply the values in a list by some number. So
 
 ```haskell
 doubleList :: [a] -> [a]
-doubleList [] = []
-doubleList (x:xs) = 2*x : doubleList xs
+doubleList []       = []
+doubleList (x:xs)   = 2*x : doubleList xs
 
 tripleList :: [a] -> [a]
-tripleList [] = []
-tripleList (x:xs) = 3*x : tripleList xs
+tripleList []       = []
+tripleList (x:xs)   = 3*x : tripleList xs
 ```
+We could do this all the way up to some arbitrary number. Clearly this is a terrible way of approaching the problem and it should be clear that the functions look identical, other than the value multiplying x.
 
 
 
