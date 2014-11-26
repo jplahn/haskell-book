@@ -49,7 +49,11 @@ ghci> funcOne 4
 ```
 `funcOne` is the result of partially applying `func`, since we only gave it a single argument. Our new function, `funcOne`, takes the second argument of our pair, which completes the function definition of `func`, allowing us to return the result. If our function takes n arguments, we could partially apply our function n - 1 times until we finally return the result. 
 
+In the above example, it's important to remember that the -> operator is right associative, whereas function application is left associative. This means that `func` actually as a function definition that looks like:
 
+```haskell
+func :: a -> (b -> b)
+```
 
 
 
