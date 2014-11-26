@@ -54,8 +54,7 @@ In the above example, it's important to remember that the -> operator is right a
 ```haskell
 func :: a -> (b -> b)
 ```
-
-
+This means that `func` takes a single argument (the first element of the pair) and returns a function that takes an element and returns it. This is why, when you perform our most recent computation in `ghci`, you don't get 1 as a result instead of 4. 
 
 
 
