@@ -14,5 +14,27 @@ The reason we can do this is that in Haskell, we have the concept of higher orde
 
 The real power in being able to use higher order functions is the ability they give us to simplify our code and make functions more general and, hopefully, less error prone. To prove it, we're going to work through the progressions of creating the `map` function above, with inspiration from the Haskell Wikis [Higher Order Functions](https://www.haskell.org/haskellwiki/Higher_order_function) page. 
 
+Say we want functions that will multiply the values in a list by some number. So we could have the following definitions.
+
+```haskell
+
+```haskell
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
