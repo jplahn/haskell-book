@@ -6,7 +6,7 @@ We're now ready to look at a fundamental aspect of functional programming: curry
 Currying is the technique of translating the evaluation of a function that takes multiple arguments (or a tuple of arguments) into evaluating a sequence of functions, each with a single argument (partial application)
 ```
 
-Named after, and developed by, Haskell Curry, currying allows us to transform a function that takes several arguments into one that takes a single argument and returns another function if more argument are still needed. We'll look at this in more depth. 
+Named after, and developed by, Haskell Curry, currying allows us to transform a function that takes several arguments into one that takes a single argument and returns another function if more arguments are still needed. We'll look at this in more depth. 
 
 ### Curried Form
 
@@ -28,7 +28,7 @@ ghci> func 1 2
 2
 ```
 
-If you try to run `snd 1 2`, ghci will throw an error because `snd` is uncurried and you attempted to use it as a curried function. On the other hand, if you attempt to write `f(1,2)`, an error will be thrown as well for the opposite reason. The `curry` function will return the curried form of a function, which changes the definition of `snd` to this, where func is our new function:
+If you try to run `snd 1 2`, ghci will throw an error because `snd` is uncurried and you attempted to use it as a curried function. On the other hand, if you attempt to write `func(1,2)`, an error will be thrown as well for the opposite reason. The `curry` function will return the curried form of a function, which changes the definition of `snd` to this, where func is our new function:
 
 ```haskell
 func :: a -> b -> b
@@ -49,14 +49,14 @@ ghci> funcOne 4
 ```
 `funcOne` is the result of partially applying `func`, since we only gave it a single argument. Our new function, `funcOne`, takes the second argument of our pair, which completes the function definition of `func`, allowing us to return the result. If our function takes n arguments, we could partially apply our function n - 1 times until we finally return the result. 
 
-In the above example, it's important to remember that the -> operator is right associative, whereas function application is left associative. This means that `func` actually as a function definition that looks like:
+In the above example, it's important to remember that the -> operator is right associative, whereas function application is left associative. This means that `func` actually has a function definition that looks like:
 
 ```haskell
 func :: a -> (b -> b)
 ```
 This means that `func` takes a single argument (the first element of the pair) and returns a function that takes an element and returns it. This is why, when you perform our most recent computation in `ghci`, you don't get 1 as a result instead of 4. 
 
-
+It is important to remember that *all functions in Haskell are curried*, even if they don't seem like they are. Put another way, all functions in Haskell take just a single argument. 
 
 
 
