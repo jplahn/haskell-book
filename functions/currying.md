@@ -65,8 +65,9 @@ add :: Int -> Int -> Int
 add x y = x + y
 
 ```
-It is *incorrect* to interpret the `add` function as taking two `Int`s and returning an `Int`. The correct interpretation of the notation is that `add` takes an `Int` and returns something of the type `Int -> Int`. If you keep this idea clear in your head, than it will be obvious that all functions are curried.  
+It is *incorrect* to interpret the `add` function as taking two `Int`s and returning an `Int`. The correct interpretation of the notation is that `add` takes an `Int` and returns something of the type `Int -> Int`. If you keep this idea clear in your head, then it will be obvious that all functions are curried.  
 
+In the grand scheme of things, currying isn't *that* important to the beginning programmer. Down the line, though, currying will be a necessary aspect to certain Haskell idioms. 
 
 
 
