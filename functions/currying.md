@@ -56,10 +56,16 @@ func :: a -> (b -> b)
 ```
 This means that `func` takes a single argument (the first element of the pair) and returns a function that takes an element and returns it. This is why, when you perform our most recent computation in `ghci`, you don't get 1 as a result instead of 4. 
 
-It is important to remember that *all functions in Haskell are curried*, even if they don't seem like they are. Put another way, all functions in Haskell take just a single argument. Said even one more way, `f x y = g (x,y)`. 
+It is important to remember that *all functions in Haskell are curried*, even if they don't seem like they are. Put another way, all functions in Haskell take just a single argument. 
 
+Let's look at another example to really drill down how we should represent function definitions. Recall our basic add function with the following definition slightly modified):
 
+```haskell
+add :: Int -> Int -> Int
+add x y = x + y
 
+```
+It is *incorrect* to interpret the `add` function as taking two `Int`s and returning an `Int`. The correct interpretation of the notation is that `add` takes an `Int` and returns something of the type `Int -> Int`. If you keep this idea clear in your head, than it will be obvious that all functions are curried.  
 
 
 
