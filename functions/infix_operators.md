@@ -25,11 +25,26 @@ break p xs@(x:xs')
            | p x        =  ([],xs)
            | otherwise  =  let (ys,zs) = break p xs' in (x:ys,zs)
 ```
-Like we have done for our other functions, let's walk through the definition. 
+Like we have done for our other functions, let's walk through the definition. The function takes a a predicate which evaluates to a boolean, something like (= 5) or (< 3). This predicate is then applied to some list, with elements of the same type as in our predicate, and we are returned two lists. The two lists are broken up based on our predicate, whereby the first list is the *longest prefix* of our initial list that does not satisfy the predicate and the second list is everything after it. The rest of the definition includes some things we haven't discussed yet, but it should be clear what is happening. We can apply it as shown:
+
+```haskell
+break (> 3) [1,2,3,4,5]
+([1,2,3],[4,5])
+ghci> (> 3) `break` [1,2,3,4,5]
+([1,2,3],[4,5])
+ghci> (>= 3) `break` [1,2,3,4,5]
+([1,2],[3,4,5])
+```
+Just as you expected!
 
 
+## Warnings
 
+While infix operators can look nice and are little more than syntactic sugar, be careful with them. It is generally considered good practice to *not* create new infix functions because of potential issues with precedence. For further reading, consider the following links. 
 
+[Avoiding infix operators](http://www.haskell.org/pipermail/haskell/2003-July/012260.html)
+
+[Deriving precedences from infix operator characters](http://www.haskell.org/pipermail/haskell-cafe/2006-October/018884.html)
 
 
 
